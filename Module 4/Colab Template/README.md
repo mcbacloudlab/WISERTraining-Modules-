@@ -1,7 +1,8 @@
 Module 4: Making Meaning with NLP Semantics
 
 
-This module explores how wording in clinical notes and survey questions affects the meaning of data. The hands-on activity builds a documented terminology crosswalk. Read Rise Module 4, Sections 4.3–4.4, choose one pathway, and use the matching prompts in the [Module 4 Colab notebook](./WISER_M4_NLP_Semantics_Template_Revised.ipynb).
+This module explores how wording in clinical notes and survey questions affects the meaning of data. The hands-on activity builds a documented terminology crosswalk. Read Rise Module 4, Sections 4.3–4.4, choose one pathway, and use the matching prompts in the Module 4 Colab notebook.
+
 Start here
 1. Open the notebook in Google Colab and select File → Save a copy in Drive. A browser and Google account are sufficient; you do not need a local Python installation.
 2. Select Foundational or Applied as directed in Rise. Complete only that pathway.
