@@ -1,4 +1,6 @@
 Module 5: Data Visualization and Communication
+
+
 Use data and a one-page brief to make a clear, responsible message for a decision-making audience. Read Rise Module 5, Sections 5.3–5.4, select one pathway, and complete the Module 5 notebook template.
 Start here
 1. Download the Module 5 .ipynb template from this GitHub folder. Open Google Colab, upload the downloaded notebook, and select File → Save a copy in Drive. No local Python setup is needed.
