@@ -1,53 +1,19 @@
-WISER Module 4: Making Meaning with NLP Semantics
+Module 4: Making Meaning with NLP Semantics
+This module explores how wording in clinical notes and survey questions affects the meaning of data. The hands-on activity builds a documented terminology crosswalk. Read Rise Module 4, Sections 4.3–4.4, choose one pathway, and use the matching prompts in the [Module 4 Colab notebook](./WISER_M4_NLP_Semantics_Template_Revised.ipynb).
+Start here
+1. Open the notebook in Google Colab and select File → Save a copy in Drive. A browser and Google account are sufficient; you do not need a local Python installation.
+2. Select Foundational or Applied as directed in Rise. Complete only that pathway.
+3. Run the cells in order, read the results, and replace the marked learner responses. Then rerun the affected cells and final export. Run all by itself leaves the assignment incomplete.
+4. Use only synthetic or appropriately licensed public-use material. Never enter real clinical notes, PHI, or sensitive data into the notebook.
+Materials
+- [Synthetic clinical notes](./Data/notes.csv) are loaded automatically by the notebook from this repository.
+- [Visit-level context](./Data/encounters.csv) is optional.
+- The curated three-wave NSDUH items and the crosswalk worksheet are provided in Rise. Consult the relevant codebooks before claiming a survey-item match.
+What you will do
+Check the supplied text for obvious identifiers, add an abbreviation rule and a medication-name variation, use the supplied recognition rules for drug/dose/route mentions, and document supported or uncertain links to HEAL CDEs and RxNorm. Review potentially stigmatizing language. A pattern check does not certify de-identification, and recognizing a term does not verify a vocabulary match.
+Pathway	Additional work	Submit
+Foundational (4.31)	Complete three crosswalk rows and a ~200-word reflection on a terminology drift case.	Completed notebook and reflection.
+Applied (4.32)	Build source-specific ingestion and transformer-based NER, audit embedding neighbors for stigma terms, and document validity threats.	Notebook, crosswalk bundle (CSV, completed JSON schema, README, verified reuse/license information), and ~500-word memo.
 
-Overview
-Module 4 introduces natural language processing (NLP) approaches for identifying and harmonizing changes in opioid-related terminology across survey and clinical text. Learners use Python-based NLP techniques to explore terminology drift, normalize language, identify opioid-related concepts, and audit outputs for stigmatizing language.
 
-The hands-on activity is completed using a Google Colab notebook with provided synthetic, deidentified datasets.
-
-Repository Contents
-Module-4/
-├── WISER_M4_NLP_Semantics_Harmonization.ipynb
-├── notes.csv
-├── notes_data_dictionary.csv
-├── encounters.csv
-└── encounters_data_dictionary.csv
-
-Google Colab Notebook
-
-WISER_M4_NLP_Semantics_Harmonization.ipynb
-
-The notebook provides a guided NLP workflow that includes:
-Loading and reviewing the provided datasets
-Deidentification checks
-Text normalization
-Named entity recognition (NER)
-Concept linking
-Terminology crosswalk development
-Stigma auditing
-FAIR-aligned export and documentation
-
-The notebook is designed for Python 3.11. A CPU runtime is sufficient for the Foundational pathway; a GPU is optional for transformer-based activities in the Applied pathway.
-
-Synthetic Datasets
-notes.csv - Synthetic, deidentified clinical-text data used to practice normalization, NER, concept linking, and stigma auditing.
-encounters.csv Optional synthetic encounter-level data that provides additional context for the clinical notes.
-
-Data dictionaries are provided for both datasets to describe the included variables and their definitions.
-
-Using the Module 4 Materials
-Open the Google Colab notebook.
-Run the setup and data-loading cells.
-Load notes.csv and, when needed, encounters.csv.
-Use the corresponding data dictionaries to review variable definitions.
-Complete the activities for your assigned Foundational or Applied pathway.
-Follow the notebook instructions to create and export the required learning artifacts.
-
-Important Data Note
-The datasets provided in this repository are synthetic and deidentified and contain no protected health information (PHI). Do not upload identifiable clinical data or PHI to this repository or substitute real clinical notes without appropriate institutional approvals and data protections.
-
-Module Information
-Estimated time: 90–110 minutes
-Design Thinking phase: Prototype
-Bloom level: Apply / Create
-Prerequisites: Modules 1–3
+The notebook can export a ZIP for review. Verify the crosswalk, source references, and permissions before sharing it; its draft schema and blank license field are prompts to complete, not verified claims. Follow your course's submission location and access instructions.
