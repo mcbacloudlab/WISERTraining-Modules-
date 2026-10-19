@@ -2,27 +2,46 @@
 
 This module explores how wording in clinical notes and survey questions affects the meaning of data. The hands-on activity builds a documented terminology crosswalk. Read **Rise Module 4, Sections 4.3–4.4**, choose one pathway, and use the matching prompts in the Module 4 notebook template.
 
-## Start here
+Please integrate the use of any AI tools you have to complete this colab.
 
-1. Download the Module 4 notebook template (`.ipynb`) from this GitHub folder. Keep it as an `.ipynb` file; do not convert it to a Word document or PDF.
-2. Open Google Colab, sign in to your Google account, and choose **File → Upload notebook**. Select the downloaded template.
-3. Choose **File → Save a copy in Drive**. Give your copy a recognizable name, such as `WISER_M4_YourName`. Work in your own saved copy.
-4. Read the notebook’s **Start here** guide. In the first code cell, set `PATHWAY` to `"Foundational"` or `"Applied"` to match Rise. Enter your name or learner ID wherever requested.
-5. Work from top to bottom. Read the instruction above each code cell, then click its **▶** button or press **Shift+Enter**. The result appears below the cell.
-6. Follow the written action label: **Run** means use the supplied cell as directed; **Edit, then run** means change only the named fields. Replace bracketed prompts with your answer, keeping the surrounding quotation marks and table punctuation. Do not type into the output below the cell.
-7. Complete your pathway’s written responses and additional work. Running all cells without completing the prompts produces an incomplete assignment. Applied learners must implement the required extensions, not only describe them.
-8. Rerun affected cells and the final export after making changes. Review every required file, save the completed notebook separately, and submit the materials listed below through your course’s submission location.
+## Start here: set up your copy
 
-A browser and Google account are sufficient; no local Python installation is needed. Use only the supplied teaching data or a source permitted for your pathway. Do not enter PHI, restricted participant data, or sensitive information.
+1. Download the Module 4 notebook template (`.ipynb`) from this GitHub folder.
+2. Open Google Colab, sign in, and select **File → Upload notebook**. Choose the downloaded file. If you already have it open, continue to step 3.
+3. Select **File → Save a copy in Drive**. Give your copy a recognizable name, such as `WISER_M4_YourName`, and work in that saved copy.
+4. In the first code cell, set `PATHWAY` to `"Foundational"` or `"Applied"` to match Rise. Enter your name or learner ID wherever requested.
+5. Work from the top down. Read the instruction before each code cell, make the requested edits, and click **▶** or press **Shift+Enter**. Review the result below the cell before continuing.
 
-## What do green and red text mean?
+A browser and Google account are sufficient; no local Python installation is needed. Use only data permitted for your pathway. Do not enter PHI, restricted participant data, identifiable clinical records or images, or other sensitive information.
 
-Colab automatically colors code to distinguish quoted text, comments, Python words, and other syntax. The colors depend on your theme and do **not** tell you which parts to edit.
+## Know what to edit
 
-- Follow **Run** and **Edit, then run** labels, rather than colors.
-- Replace `[bracketed response prompts]` only where instructed. Keep quotation marks, field names, commas and braces intact.
-- A red **error message below a cell** is different from colored code. Read the message, fix the named issue, and rerun that cell and the later cells that depend on it.
-- Tables, charts and messages beneath a code cell are outputs to review; write your answers in the specified editable fields.
+- **Run:** Use the supplied cell as directed; no edit is needed for that example.
+- **Edit, then run:** Change only the named response fields or settings.
+- **Bracketed prompts:** Replace `[the prompt]` with your answer, keeping quotation marks, field names and punctuation. Write in the editable code cell, not the output below it.
+- **TODO lines:** Before running each section, complete any `#TODO` or `# TODO` instructions in its code. Replace the **entire instruction line** with completed code so the finished line no longer starts with the marker. Keep unrelated explanatory `#` comments.
+
+For example, inside the dictionary where instructed, replace:
+
+```python
+# TODO: add "oud": "opioid use disorder"
+```
+
+with:
+
+```python
+"oud": "opioid use disorder",
+```
+
+This example shows the format; do not add it to other cells. Running all cells without completing the learner prompts leaves an incomplete assignment. Applied learners must implement their required extensions as well as document them.
+
+## Understand the colors
+
+Colab automatically colors quoted text, comments, Python words and other syntax. Green and red text **inside code** do not tell you what to edit; colors vary by theme. Follow the written action labels. A red **error message below a cell** is different: read it, correct the named issue, and rerun that cell and any later cells that depend on it.
+
+## Returning after a pause
+
+If you pause for any length of time, save your work. When you return, **rerun all code cells starting from the top** before continuing. Keep your completed answers in place. Colab may disconnect or clear the working session while you are away, so earlier data and variables may need to be loaded again.
 
 ## Materials
 
@@ -40,8 +59,9 @@ Check the supplied text for obvious identifiers, add an abbreviation rule and a 
 | **Applied (4.32)** | Build source-specific ingestion and transformer-based NER, audit embedding neighbors for stigma terms, and document validity threats. | Notebook, crosswalk bundle (CSV, completed JSON schema, README, verified reuse/license information), and ~500-word memo. |
 
 The notebook can export a ZIP for review. Verify the crosswalk, source references, and permissions before sharing it; its draft schema and blank license field are prompts to complete, not verified claims. Follow your course's submission location and access instructions.
+
 ## Before you submit
 
-Check that you completed only your chosen pathway, replaced all required prompts, reviewed the actual results, and opened the exported PDF or tables. If you changed an earlier cell, rerun from that point downward. If your session disconnected, run the notebook from the first code cell again.
+Check that you completed only your chosen pathway, replaced all required prompts, reviewed the actual results, and opened the exported PDF or tables. If you changed an earlier cell, rerun from that point downward. 
 
 If a code error continues, share the error text and the section name with your instructor. Avoid changing unrelated code to make the message disappear.
