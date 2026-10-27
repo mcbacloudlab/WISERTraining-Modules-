@@ -1,67 +1,62 @@
-# Module 4: Making Meaning with NLP Semantics
+# WISER Module 4: Making Meaning with NLP Semantics
 
-This module explores how wording in clinical notes and survey questions affects the meaning of data. The hands-on activity builds a documented terminology crosswalk. Read **Rise Module 4, Sections 4.3–4.4**, choose one pathway, and use the matching prompts in the Module 4 notebook template.
+Inspect synthetic notes, normalize wording, recognize mentions, and document terminology-mapping decisions. This is the most guided activity in the Module 4–8 sequence. Its definition and language checks prepare you to make accurate chart claims in Module 5.
 
-Please integrate the use of any AI tools you have to complete this colab.
+## Open your notebook
 
-## Start here: set up your copy
+1. Read **WISER Module 4, Sections 4.3–4.4**, and choose Foundational or Applied.
+2. Open the [Colab Template folder](./Colab%20Template/) and download the revised Module 4 `.ipynb` file.
+3. In Google Colab, choose **File → Upload notebook**, then select the downloaded file.
+4. Choose **File → Save a copy in Drive**. Work in your saved copy.
+5. Set `PATHWAY` to `"Foundational"` or `"Applied"`, matching your WISER choice. Enter your learner name or ID where requested.
+6. Follow the notebook from top to bottom. Click **▶** or press **Shift+Enter** to run a code cell, then read its output.
 
-1. Download the Module 4 notebook template (`.ipynb`) from this GitHub folder.
-2. Open Google Colab, sign in, and select **File → Upload notebook**. Choose the downloaded file. If you already have it open, continue to step 3.
-3. Select **File → Save a copy in Drive**. Give your copy a recognizable name, such as `WISER_M4_YourName`, and work in that saved copy.
-4. In the first code cell, set `PATHWAY` to `"Foundational"` or `"Applied"` to match Rise. Enter your name or learner ID wherever requested.
-5. Work from the top down. Read the instruction before each code cell, make the requested edits, and click **▶** or press **Shift+Enter**. Review the result below the cell before continuing.
+Edit answers in the **code cell**, not in the table or message below it. Replace the whole `[bracketed prompt]` with your answer while keeping quotation marks, field names, and punctuation. **Run** means no edit is required; **Edit, then run** names what to change; **Run, then answer** asks you to inspect output before writing in the response cell that follows.
 
-A browser and Google account are sufficient; no local Python installation is needed. Use only data permitted for your pathway. Do not enter PHI, restricted participant data, identifiable clinical records or images, or other sensitive information.
-
-## Know what to edit
-
-- **Run:** Use the supplied cell as directed; no edit is needed for that example.
-- **Edit, then run:** Change only the named response fields or settings.
-- **Bracketed prompts:** Replace `[the prompt]` with your answer, keeping quotation marks, field names and punctuation. Write in the editable code cell, not the output below it.
-- **TODO lines:** Before running each section, complete any `#TODO` or `# TODO` instructions in its code. Replace the **entire instruction line** with completed code so the finished line no longer starts with the marker. Keep unrelated explanatory `#` comments.
-
-For example, inside the dictionary where instructed, replace:
-
-```python
-# TODO: add "oud": "opioid use disorder"
-```
-
-with:
-
-```python
-"oud": "opioid use disorder",
-```
-
-This example shows the format; do not add it to other cells. Running all cells without completing the learner prompts leaves an incomplete assignment. Applied learners must implement their required extensions as well as document them.
-
-## Understand the colors
-
-Colab automatically colors quoted text, comments, Python words and other syntax. Green and red text **inside code** do not tell you what to edit; colors vary by theme. Follow the written action labels. A red **error message below a cell** is different: read it, correct the named issue, and rerun that cell and any later cells that depend on it.
-
-## Returning after a pause
-
-If you pause for any length of time, save your work. When you return, **rerun all code cells starting from the top** before continuing. Keep your completed answers in place. Colab may disconnect or clear the working session while you are away, so earlier data and variables may need to be loaded again.
+Please integrate the use of any AI tools you have to complete this Colab. Check their suggestions against the source materials and your actual results. Use only permitted data; do not enter protected health information, identifiable clinical records or images, or restricted participant data.
 
 ## Materials
 
-- [Synthetic clinical notes](./Data/notes.csv) are loaded automatically by the notebook from this repository.
-- [Visit-level context](./Data/encounters.csv) is optional.
-- The curated three-wave NSDUH items and the crosswalk worksheet are provided in Rise. Consult the relevant codebooks before claiming a survey-item match.
+- [Synthetic notes](./Data/notes.csv), loaded automatically by the notebook.
+- The three-wave NSDUH teaching subset and matching-year codebooks supplied in WISER. Open these before completing the crosswalk.
+- Source definitions for any HEAL common data element (CDE) or RxNorm target you consider. The notebook does not supply verified target identifiers.
 
 ## What you will do
 
-Check the supplied text for obvious identifiers, add an abbreviation rule and a medication-name variation, use the supplied recognition rules for drug/dose/route mentions, and document supported or uncertain links to HEAL CDEs and RxNorm. Review potentially stigmatizing language. A pattern check does not certify de-identification, and recognizing a term does not verify a vocabulary match.
+1. Load the notes and inspect the identifier-pattern results. Explain why a simple pattern check cannot certify de-identification.
+2. Add one abbreviation rule and one drug-name variation. Section 3 contains two marked edit locations; the notebook's **Start here** section provides the single worked TODO example. Follow that example there rather than adding it to other cells.
+3. Run the supplied recognition rules and describe one match and one limitation. Finding a mention is different from verifying a concept link.
+4. Complete the three independently editable crosswalk rows, `CW-001`–`CW-003`. Find the exact source variable in the teaching subset, locate it in the matching-year codebook, and cite the wording, definition/timeframe, and page or item. Compare source and target evidence before selecting `supported`, `uncertain`, or `no suitable mapping`. Leave an unverified target ID blank.
+5. Review flagged language, write a respectful replacement sentence and rationale, and explain one bias-review step.
 
-| Pathway | Additional work | Submit |
+Repeated identical note text is not independent evidence. The notebook displays the row and distinct-text counts and uses representative distinct texts for practice.
+
+## Choose one pathway
+
+| Pathway | Required work | Submission |
 | --- | --- | --- |
-| **Foundational (4.31)** | Complete three crosswalk rows and a ~200-word reflection on a terminology drift case. | Completed notebook and reflection. |
-| **Applied (4.32)** | Build source-specific ingestion and transformer-based NER, audit embedding neighbors for stigma terms, and document validity threats. | Notebook, crosswalk bundle (CSV, completed JSON schema, README, verified reuse/license information), and ~500-word memo. |
+| **Foundational — WISER 4.31** | Complete the guided activities and three crosswalk rows. Write approximately **200 words** on one terminology-drift case, the evidence you checked, and what you would not combine. | Completed notebook and reflection, as directed in WISER. The reflection is also included in the exported responses. |
+| **Applied — WISER 4.32** | Implement source-specific ingestion, transformer-based named entity recognition, concept-linking decisions, and an embedding-neighbor audit for stigma terms. Document methods/model versions and write an approximately **500-word** validity memo. | Notebook, crosswalk bundle with completed schema/README and verified reuse/license information, and validity memo. The guided examples alone do not fulfill Applied. |
 
-The notebook can export a ZIP for review. Verify the crosswalk, source references, and permissions before sharing it; its draft schema and blank license field are prompts to complete, not verified claims. Follow your course's submission location and access instructions.
+## Exported files
 
-## Before you submit
+The final cell creates `WISER_Module_4_submission.zip`, containing `module4_outputs/`.
 
-Check that you completed only your chosen pathway, replaced all required prompts, reviewed the actual results, and opened the exported PDF or tables. If you changed an earlier cell, rerun from that point downward. 
+| File | Contents |
+| --- | --- |
+| `terminology_crosswalk.csv` | Your mapping decisions and source references. |
+| `normalized_analysis_layer.csv` | Derived analysis text and rule-based mentions; this is not a raw-note export. |
+| `responses.md` | Review answers and your reflection or memo. |
+| `metadata.json` | Source and processing details. |
+| `crosswalk_schema.json`, `README.md`, `LICENSE.txt` | Draft bundle documentation. Applied learners must complete and verify the schema, README, and reuse/license information. |
 
-If a code error continues, share the error text and the section name with your instructor. Avoid changing unrelated code to make the message disappear.
+## Save, check, and submit
+
+- After a pause, rerun code cells from the top, keeping your completed answers. Colab may have cleared earlier data or variables.
+- If you change an earlier answer or setting, rerun from that cell downward, including export.
+- Resolve the required `TO COMPLETE` notices. A successful run alone does not complete the assignment.
+- Open the exported files and check that they match your answers and results. In Colab's **Files** panel, use the file menu to download a PDF or other output if needed.
+- Save the completed notebook separately with **File → Download → Download .ipynb**. Follow WISER's submission location and access instructions for your pathway.
+
+If a cell fails, read the first error message, correct the named issue, and rerun. If you need help, share the error text and section name with your instructor. Code colors are syntax highlighting, not instructions about what to edit.
+
