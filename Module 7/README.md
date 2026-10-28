@@ -1,65 +1,69 @@
-# Module 7: Deep Learning and Images
+# WISER Module 7: Deep Learning and Images
 
-Learn how convolutional neural networks (CNNs) handle images while assessing whether an image model could be responsibly studied in a different setting. Read **Rise Module 7, Sections 7.3–7.4** and choose one pathway in the Module 7 notebook template.
+Train or adapt a convolutional neural network (CNN), inspect image-classification errors, and draft a proposed HopeBridge study. Build on Module 6's separation of training and evaluation: now distinguish training, validation, and test images and assess the limits of transferring an image model to another setting.
 
-Please integrate the use of any AI tools you have to complete this colab.
+## Open your notebook
 
-## Start here: set up your copy
+1. Read **WISER Module 7, Sections 7.3–7.4**, and choose Foundational or Applied.
+2. In GitHub, open the Module 7 `.ipynb` notebook file and click **Download raw file** to save it to your computer.
+3. Open [Google Colab](https://colab.research.google.com/), choose **File → Upload notebook**, and select the downloaded `.ipynb` file. You will work in your own Colab instance.
+4. Choose **File → Save a copy in Drive**. Work in your saved copy.
+5. Set `PATHWAY` to `"Foundational"` or `"Applied"`, matching your WISER choice. Enter your learner name or ID where requested.
+6. Follow the notebook from top to bottom. Click **▶** or press **Shift+Enter** to run a code cell, then read its output.
 
-1. Download the Module 7 notebook template (`.ipynb`) from this GitHub folder.
-2. Open Google Colab, sign in, and select **File → Upload notebook**. Choose the downloaded file. If you already have it open, continue to step 3.
-3. Select **File → Save a copy in Drive**. Give your copy a recognizable name, such as `WISER_M7_YourName`, and work in that saved copy.
-4. In the first code cell, set `PATHWAY` to `"Foundational"` or `"Applied"` to match Rise. Enter your name or learner ID wherever requested.
-5. Work from the top down. Read the instruction before each code cell, make the requested edits, and click **▶** or press **Shift+Enter**. Review the result below the cell before continuing.
+Edit answers in the **code cell**, not in the table or message below it. Replace the whole `[bracketed prompt]` with your answer while keeping quotation marks, field names, and punctuation. **Run** means no edit is required; **Edit, then run** names what to change; **Run, then answer** asks you to inspect output before writing in the response cell that follows.
 
-A browser and Google account are sufficient; no local Python installation is needed. Use only data permitted for your pathway. Do not enter PHI, restricted participant data, identifiable clinical records or images, or other sensitive information.
+Please integrate the use of any AI tools you have to complete this Colab. Check their suggestions against the source materials and your actual results. Use only permitted data; do not enter protected health information, identifiable clinical records or images, or restricted participant data.
 
-## Know what to edit
+## Materials and setup
 
-- **Run:** Use the supplied cell as directed; no edit is needed for that example.
-- **Edit, then run:** Change only the named response fields or settings.
-- **Bracketed prompts:** Replace `[the prompt]` with your answer, keeping quotation marks, field names and punctuation. Write in the editable code cell, not the output below it.
-- **TODO lines:** Before running each section, complete any `#TODO` or `# TODO` instructions in its code. Replace the **entire instruction line** with completed code so the finished line no longer starts with the marker. Keep unrelated explanatory `#` comments.
+- Foundational loads **Fashion-MNIST clothing images** through the notebook. The exercise does not require you to upload clinical images.
+- Applied requires an openly licensed replacement dataset, documented source/license terms, an adapted loader/model, and an implemented extension.
+- Applied also requires the smartphone eye-scanning paper supplied in WISER; read it before writing the appraisal.
+- TensorFlow is required. If the import cell reports it is missing, run `%pip install tensorflow` in a separate Colab code cell, restart the runtime/session, and rerun from the top. The small guided subset can run on a CPU; a GPU is optional.
 
-For example, inside the dictionary where instructed, replace:
+The clothing classifier and the HopeBridge clinical research proposal are **separate tasks**. Clothing accuracy does not validate facial/ocular or adolescent return-to-use prediction.
 
-```python
-# TODO: add "oud": "opioid use disorder"
-```
+## What you will do
 
-with:
+1. Enter your learner ID and document dataset provenance and reuse conditions. Load independent training, validation, and test splits.
+2. Inspect the training-image gallery. In the following answer cell, identify visually similar classes and write gallery alt text.
+3. Run the CNN training cell and let it finish. Do not retrain simply to enter a written answer.
+4. Compare training/validation accuracy and loss, then complete the separate curve-response cell. State whether the displayed evidence suggests overfitting; three epochs may not establish it.
+5. Evaluate the held-out test data. Read the class report and confusion matrix, then cite an error or low-recall class in the separate error-response cell. Describe what overall accuracy hides.
+6. Connect validation, consent/privacy, and continuity of care to the WISER HopeBridge scenario. Complete every field of the proposed protocol sketch.
+7. Complete your pathway reflection/appraisal and, for Applied, the implemented extension and model card. Choose model changes using training/validation evidence rather than repeatedly tuning to test results.
 
-```python
-"oud": "opioid use disorder",
-```
+## Choose one pathway
 
-This example shows the format; do not add it to other cells. Running all cells without completing the learner prompts leaves an incomplete assignment. Applied learners must implement their required extensions as well as document them.
-
-## Understand the colors
-
-Colab automatically colors quoted text, comments, Python words and other syntax. Green and red text **inside code** do not tell you what to edit; colors vary by theme. Follow the written action labels. A red **error message below a cell** is different: read it, correct the named issue, and rerun that cell and any later cells that depend on it.
-
-## Returning after a pause
-
-If you pause for any length of time, save your work. When you return, **rerun all code cells starting from the top** before continuing. Keep your completed answers in place. Colab may disconnect or clear the working session while you are away, so earlier data and variables may need to be loaded again.
-
-## Materials and data
-
-Foundational downloads Fashion-MNIST clothing images through the notebook. A GPU runtime can speed up training but is not required. Applied learners choose and document an openly licensed dataset and adapt the actual loader/model. Read the smartphone eye-scanning paper attached in Rise before writing the Applied appraisal.
-
-## Keep the two tasks distinct
-
-The Foundational CNN classifies **clothing images** in Fashion-MNIST. Its accuracy says nothing about opioid use, adolescent care, eye scans, or HopeBridge. The **Rise 7.3 protocol sketch** is a separate, proposed research plan. Complete it for either pathway; it does not authorize image collection or clinical deployment.
-
-| Pathway | What to complete | Submit |
+| Pathway | Required work | Submission |
 | --- | --- | --- |
-| **Foundational (7.31)** | Build the guided CNN; interpret training/validation curves and a test error; write a ~250-word reflection connecting the exercise to validation and privacy decisions. | Completed `.ipynb`, reflection, and protocol sketch PDF. |
-| **Applied (7.32)** | Adapt the CNN to a documented openly licensed dataset, implement an appropriate extension, write a 1–2 page model card, and critically appraise the smartphone eye-scanning paper attached in Rise (~500 words). | Adapted `.ipynb`, model card PDF, appraisal memo, and protocol sketch PDF. |
+| **Foundational — WISER 7.31** | Guided Fashion-MNIST CNN, gallery/curve/error interpretations, scenario connection, protocol sketch, and approximately **250-word** reflection. | Completed `.ipynb`, reflection, and protocol-sketch PDF; retain the supporting outputs ZIP as directed in WISER. |
+| **Applied — WISER 7.32** | Adapt an openly licensed replacement dataset, implement and justify an appropriate extension, complete the protocol and a **1–2 page** model card, and critically appraise the assigned paper in approximately **500 words**. | Adapted `.ipynb`, model-card PDF, appraisal memo, protocol-sketch PDF, and supporting outputs as directed in WISER. |
 
-The notebook packages supporting figures and written answers in an outputs ZIP. If your instructor requests the Rise DOCX protocol template, transfer the completed sketch into that template as well. Rerun the notebook from the beginning and inspect each exported PDF before submitting.
-## Before you submit
+Applied must change the actual loading/preprocessing/model workflow, not just the dataset name. Document the implemented changes in `APPLIED_ADAPTATION_NOTES` and the model card. If WISER requests its DOCX protocol template, transfer your completed protocol answers into it too.
 
-Check that you completed only your chosen pathway, replaced all required prompts, reviewed the actual results, and opened the exported PDF or tables. If you changed an earlier cell, rerun from that point downward. 
+## Exported files
 
-If a code error continues, share the error text and the section name with your instructor. Avoid changing unrelated code to make the message disappear.
+The final cell creates `WISER_Module_7_outputs.zip`, containing `module7_outputs/`.
 
+| File | Contents |
+| --- | --- |
+| `Module_7_protocol_sketch.pdf`, `protocol_sketch.md` | Proposed research protocol for either pathway. |
+| `training_validation_curves.png`, `confusion_matrix.png` | Learning curves and test-error summary. |
+| `responses.md` | Observations, scenario connection, and pathway response. |
+| `foundational_reflection.md` | Foundational reflection only. |
+| `Module_7_model_card.pdf`, `model_card.md`, `appraisal_memo.md` | Applied documentation only; the supplied PDF summary fits within the 1–2 page requirement. |
+| `metadata.json`, `README.md` | Dataset and methods documentation. |
+
+The notebook does not export source images or individual predictions. The protocol PDF limits each field to 230 characters; the model-card summary limits each field to 310. Shorten the named field if a layout error appears.
+
+## Save, check, and submit
+
+- After a pause, rerun code cells from the top, keeping your completed answers. Colab may have cleared earlier data or variables.
+- If you change an earlier answer or setting, rerun from that cell downward, including export.
+- Resolve the required `TO COMPLETE` notices. A successful run alone does not complete the assignment.
+- Open the exported files and check that they match your answers and results. In Colab's **Files** panel, use the file menu to download a PDF or other output if needed.
+- Save the completed notebook separately with **File → Download → Download .ipynb**. Follow WISER's submission location and access instructions for your pathway.
+
+If a cell fails, read the first error message, correct the named issue, and rerun. If you need help, share the error text and section name with your instructor. Code colors are syntax highlighting, not instructions about what to edit.
