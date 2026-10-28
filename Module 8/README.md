@@ -1,64 +1,78 @@
-# Module 8: Translational Portfolio Capstone
+# WISER Module 8: Translational Portfolio Capstone
 
-Bring together data choices, terminology, documentation, human review, and stakeholder feedback in a **research plan**. Read **Rise Module 8, Sections 8.3–8.4**, select one pathway, and complete the Module 8 notebook template. The exercise does not produce Phase 2 trial findings or an approved clinical decision tool.
+Bring the methods from Modules 4–7 together in one research-planning portfolio. You now choose and justify a coherent measurement plan, trace changes from feedback, and communicate the decision needed. This exercise does not generate trial results or establish a clinical decision tool.
 
-Please integrate the use of any AI tools you have to complete this colab.
+## Open your notebook
 
-## Start here: set up your copy
+1. Read **WISER Module 8, Sections 8.3–8.4**, and choose Foundational or Applied.
+2. In GitHub, open the Module 8 `.ipynb` notebook file and click **Download raw file** to save it to your computer.
+3. Open [Google Colab](https://colab.research.google.com/), choose **File → Upload notebook**, and select the downloaded `.ipynb` file. You will work in your own Colab instance.
+4. Choose **File → Save a copy in Drive**. Work in your saved copy.
+5. Set `PATHWAY` to `"Foundational"` or `"Applied"`, matching your WISER choice. Enter your learner name or ID where requested.
+6. Follow the notebook from top to bottom. Click **▶** or press **Shift+Enter** to run a code cell, then read its output.
 
-1. Download the Module 8 notebook template (`.ipynb`) from this GitHub folder.
-2. Open Google Colab, sign in, and select **File → Upload notebook**. Choose the downloaded file. If you already have it open, continue to step 3.
-3. Select **File → Save a copy in Drive**. Give your copy a recognizable name, such as `WISER_M8_YourName`, and work in that saved copy.
-4. In the first code cell, set `PATHWAY` to `"Foundational"` or `"Applied"` to match Rise. Enter your name or learner ID wherever requested.
-5. Work from the top down. Read the instruction before each code cell, make the requested edits, and click **▶** or press **Shift+Enter**. Review the result below the cell before continuing.
+Edit answers in the **code cell**, not in the table or message below it. Replace the whole `[bracketed prompt]` with your answer while keeping quotation marks, field names, and punctuation. **Run** means no edit is required; **Edit, then run** names what to change; **Run, then answer** asks you to inspect output before writing in the response cell that follows.
 
-A browser and Google account are sufficient; no local Python installation is needed. Use only data permitted for your pathway. Do not enter PHI, restricted participant data, identifiable clinical records or images, or other sensitive information.
+Please integrate the use of any AI tools you have to complete this Colab. Check their suggestions against the source materials and your actual results. Use only permitted data; do not enter protected health information, identifiable clinical records or images, or restricted participant data.
 
-## Know what to edit
+## Materials
 
-- **Run:** Use the supplied cell as directed; no edit is needed for that example.
-- **Edit, then run:** Change only the named response fields or settings.
-- **Bracketed prompts:** Replace `[the prompt]` with your answer, keeping quotation marks, field names and punctuation. Write in the editable code cell, not the output below it.
-- **TODO lines:** Before running each section, complete any `#TODO` or `# TODO` instructions in its code. Replace the **entire instruction line** with completed code so the finished line no longer starts with the marker. Keep unrelated explanatory `#` comments.
+- Foundational uses the WISER Phase 2 non-opioid analgesic **measurement-planning** question and may remain template-only: no participant dataset or fitted model is required.
+- Applied uses a mentor-approved addiction-science question and a permitted source, with source-specific evidence and implemented mapping/review work.
+- The WISER HopeBridge implementation-risk feedback is **instructor-simulated** unless actual approved feedback is available. Identify its source honestly.
+- Earlier module outputs can inform your choices. The earlier datasets differ; do not automatically join them or treat their results as clinical evidence for this project.
 
-For example, inside the dictionary where instructed, replace:
+## How the earlier modules connect
 
-```python
-# TODO: add "oud": "opioid use disorder"
-```
+| Earlier module | Apply here |
+| --- | --- |
+| 4 — NLP semantics | Compare definitions, document label drift, and preserve uncertainty in mappings. |
+| 5 — Visualization | Choose an audience, make an evidence-supported statement, and communicate caveats and a next step. |
+| 6 — Machine learning | Specify intended use, error/fairness review, model limits, and governance. |
+| 7 — Images | Distinguish within-source evaluation from external validation; address image consent, privacy, and continuity of care. |
 
-with:
-
-```python
-"oud": "opioid use disorder",
-```
-
-This example shows the format; do not add it to other cells. Running all cells without completing the learner prompts leaves an incomplete assignment. Applied learners must implement their required extensions as well as document them.
-
-## Understand the colors
-
-Colab automatically colors quoted text, comments, Python words and other syntax. Green and red text **inside code** do not tell you what to edit; colors vary by theme. Follow the written action labels. A red **error message below a cell** is different: read it, correct the named issue, and rerun that cell and any later cells that depend on it.
-
-## Returning after a pause
-
-If you pause for any length of time, save your work. When you return, **rerun all code cells starting from the top** before continuing. Keep your completed answers in place. Colab may disconnect or clear the working session while you are away, so earlier data and variables may need to be loaded again.
-
-## Materials and data
-
-Foundational may complete a template-only measurement plan using the Rise scenario. Applied requires a mentor-approved question and a permitted dataset; optional synthetic WISER files can support the project. Earlier module outputs are optional references. Use the simulated HopeBridge feedback in Rise and label it as simulated unless real approved feedback was provided.
+In `learning_connections`, explain how one method from each module informs your plan. Reuse reasoning and documentation where relevant rather than copying unrelated results.
 
 ## Build the portfolio
 
-Both pathways cover a question and workplan; a modality comparison across at least five axes; documentation of two legacy DSM-IV labels and uncertain DSM-5 mappings; dataset/model cards and a HEAL CDE crosswalk; a human-in-the-loop review plan; a one-page policy or clinical brief; traceable HopeBridge feedback revisions; and a FAIR README. Do not invent a diagnostic mapping, CDE identifier, study result, license, or organizational approval. If no model was fitted, say so in its card.
+1. **Scope and workplan:** State the population, question, intended decision, audience, and evidence stage. Assign owner roles, deliverables, review gates, and risks.
+2. **Modality comparison:** Compare wearable summaries, consented task-based video summaries, clinical text/NLP, and tabular/reported data with no-code ML. Address measures, cost/burden, latency, privacy, and interpretability, with sources. Recommend an initial combination and explain the tradeoffs; a no-code tool is not itself a measurement source.
+3. **Legacy-label mapping:** Complete both legacy-label rows. Compare definitions before proposing current constructs, leave unsupported IDs empty, and route ambiguity to qualified review. Applied also adapts the routing logic and checks synthetic test cases.
+4. **Cards and CDE crosswalk:** Document source/status, access, reuse conditions, intended use, evidence, and limitations. State clearly when no model was fitted. Enter HEAL CDE identifiers only after verifying both definitions.
+5. **Human review:** Specify reviewer roles, triggers, allowed actions, log fields, and audit frequency. A blank log schema is not evidence of completed review. Applied implements a handoff and logs a synthetic test decision.
+6. **Feedback and revision:** Address wearable adherence, perceived video surveillance, and unclear vendor residency. Record before/after changes, owners, and follow-up evidence. Revise earlier portfolio sections wherever a change affects them, then rerun from the earliest edit.
+7. **Brief and reflection:** Write a one-page planning brief that agrees with the tables, feedback changes, and review plan. Complete your pathway reflection or memo without repeating every table.
 
-| Pathway | Project and additional work | Submit |
+## Choose one pathway
+
+| Pathway | Required work | Submission |
 | --- | --- | --- |
-| **Foundational (8.31)** | Use the provided non-opioid analgesic Phase 2 *measurement-planning* question and scaffolded materials. Complete two legacy-label mappings and explain the most consequential change from feedback in ~300 words. | Completed notebook and portfolio ZIP with brief, documentation, feedback memo, and reflection. |
-| **Applied (8.32)** | Obtain mentor approval for an addiction-science question; use a permitted dataset; cite modality evidence; implement a source-specific mapping and ambiguity-routing workflow; document review logging and audit cadence. Write an ~800-word memo on the translational claim, limits, and governance. | Completed notebook and portfolio ZIP with full FAIR artifacts, revised brief, feedback memo, and pathway memo. |
+| **Foundational — WISER 8.31** | Provided measurement-planning question, completed planning artifacts and both legacy-label rows, simulated-feedback revisions, and approximately **300 words** on one consequential change. | Completed notebook and portfolio ZIP with brief, documentation, feedback memo, and reflection. |
+| **Applied — WISER 8.32** | Mentor-approved question, permitted source, cited modality evidence, implemented source-specific mapping/review/logging workflow, and approximately **800 words** on the claim, evidence limits, governance, and feedback changes. | Completed notebook and full portfolio ZIP, including the revised brief, documentation, feedback memo, and pathway memo. |
 
-Rise permits **instructor-simulated HopeBridge implementation-risk feedback**. Identify it as simulated unless you have actual, approved feedback. The notebook's example flags wearable adherence, perceived video surveillance, and uncertain vendor data residency; document what changed and what still needs review. Follow your course's submission instructions for where to turn in the notebook and ZIP.
-## Before you submit
+## Exported files
 
-Check that you completed only your chosen pathway, replaced all required prompts, reviewed the actual results, and opened the exported PDF or tables. If you changed an earlier cell, rerun from that point downward. 
+The final cell creates `WISER_Module_8_portfolio.zip`, containing `module8_portfolio/`.
 
-If a code error continues, share the error text and the section name with your instructor. Avoid changing unrelated code to make the message disappear.
+| Files | Contents |
+| --- | --- |
+| `Module_8_one_page_brief.pdf`, `brief_text.md` | Planning decision, recommendation, safeguards, limitations, and next step. |
+| `project_workplan.csv`, `modality_comparison.csv` | Workplan and evidence-based comparison. |
+| `dsm5_mapping.csv`, `heal_cde_crosswalk.csv` | Legacy-label decisions and CDE documentation. |
+| `dataset_card.md`, `model_card.md` | Source, status, use, and limitations. |
+| `human_review_specification.csv`, `review_log_schema.csv` | Review plan and log structure. |
+| `feedback_revision_log.csv`, `hopebridge_feedback_memo.md` | Traceable feedback changes and unresolved issues. |
+| `learning_connections.md`, `pathway_reflection_or_memo.md` | Earlier-module connections and pathway response. |
+| `metadata.json`, `README.md` | Portfolio provenance and FAIR documentation. |
+
+FAIR means findable, accessible, interoperable, and reusable. Document permissions and reuse conditions rather than assuming that a portfolio is ready to share. The PDF limits its headline to 170 characters and each section to 230; shorten the named field if needed.
+
+## Save, check, and submit
+
+- After a pause, rerun code cells from the top, keeping your completed answers. Colab may have cleared earlier data or variables.
+- If you change an earlier answer or setting, rerun from that cell downward, including export.
+- Resolve the required `TO COMPLETE` notices. A successful run alone does not complete the assignment.
+- Open the exported files and check that they match your answers and results. In Colab's **Files** panel, use the file menu to download a PDF or other output if needed.
+- Save the completed notebook separately with **File → Download → Download .ipynb**. Follow WISER's submission location and access instructions for your pathway.
+
+If a cell fails, read the first error message, correct the named issue, and rerun. If you need help, share the error text and section name with your instructor. Code colors are syntax highlighting, not instructions about what to edit.
