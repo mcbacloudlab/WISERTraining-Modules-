@@ -5,8 +5,8 @@ Inspect synthetic notes, normalize wording, recognize mentions, and document ter
 ## Open your notebook
 
 1. Read **WISER Module 4, Sections 4.3–4.4**, and choose Foundational or Applied.
-2. Open the [Colab Template folder](./Colab%20Template/) and download the revised Module 4 `.ipynb` file.
-3. In Google Colab, choose **File → Upload notebook**, then select the downloaded file.
+2. In GitHub, open the Module 4 `.ipynb` notebook file and click **Download raw file** to save it to your computer.
+3. Open [Google Colab](https://colab.research.google.com/), choose **File → Upload notebook**, and select the downloaded `.ipynb` file. You will work in your own Colab instance.
 4. Choose **File → Save a copy in Drive**. Work in your saved copy.
 5. Set `PATHWAY` to `"Foundational"` or `"Applied"`, matching your WISER choice. Enter your learner name or ID where requested.
 6. Follow the notebook from top to bottom. Click **▶** or press **Shift+Enter** to run a code cell, then read its output.
